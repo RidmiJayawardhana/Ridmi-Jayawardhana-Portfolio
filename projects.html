@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Projects — Ridmi Jayawardhana</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">
+      <a>Ridmi Jayawardhana</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active" href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="container" style="margin-top:60px;">
+
+  <div class="card" style="margin-bottom:40px;">
+    <h3>Personal Portfolio</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="images/1.png" alt="Portfolio 1">
+        
+        <img src="images/3.png" alt="Portfolio 3">
+        <img src="images/4.png" alt="Portfolio 4">
+<img src="images/7.png" alt="Portfolio 5">
+        <img src="images/8.png" alt="Portfolio 6">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <p>
+      A personal portfolio website built to showcase my projects and skills.
+      Demonstrates my ability to design responsive layouts and structure content
+      effectively using HTML, CSS, and JavaScript.
+    </p>
+  </div>
+
+  <div class="card" style="margin-bottom:40px;">
+    <h3>An AI-Based Content-Driven Movie Recommendation System</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="images/6.png" alt="Movie 1">
+        <img src="images/5.png" alt="Movie 2">
+        <img src="images/9.png" alt="Movie 3">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <p>
+      An AI-based movie recommendation system developed using content-driven
+      techniques to suggest movies based on user preferences, enhancing the
+      overall entertainment experience.
+    </p>
+  </div>
+
+  <div class="card" style="margin-bottom:40px;">
+    <h3>Endless Runner Game</h3>
+    <video width="100%" controls>
+      <source src="videos/1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      An endless runner game developed using Unity, featuring increasing
+      difficulty, smooth controls, animations, and score tracking for an
+      engaging gameplay experience.
+    </p>
+  </div>
+
+  <div class="card" style="margin-bottom:40px;">
+    <h3>PrimeHeal – Health Support System</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="images/f1.jpeg" alt="PrimeHeal 1">
+        <img src="images/f2.jpeg" alt="PrimeHeal 2">
+        <img src="images/f3.jpeg" alt="PrimeHeal 3">
+        <img src="images/f4.jpeg" alt="PrimeHeal 4">
+        <img src="images/f5.jpeg" alt="PrimeHeal 5">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <p>
+      A health support system currently under development. Serving as the
+      Project Manager, overseeing planning, coordination, and progress to
+      deliver a reliable and user-friendly healthcare platform.
+    </p>
+  </div>
+
+  <div class="card" style="margin-bottom:40px;">
+    <h3>Website for Cafe Sienna</h3>
+    <video width="100%" controls>
+      <source src="videos/2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>
+      A responsive cafe website developed as a group project using HTML, CSS,
+      and JavaScript, focusing on modern UI design, accessibility, and usability
+      across devices.
+    </p>
+  </div>
+
+</section>
+
+<footer class="footer">
+  <p>© 2025 Ridmi Jayawardhana • Student Portfolio</p>
+  <div style="margin-top:10px;">
+    <a href="https://www.facebook.com/share/1C2Xt9mBVi/?mibextid=wwXIfr" target="_blank" style="text-decoration:none;">
+      <img src="images/19.png" alt="Facebook" style="width:24px; height:24px; margin:0 8px;">
+    </a>
+    <a href="https://github.com/RidmiJayawardhana" target="_blank" style="text-decoration:none;">
+      <img src="images/10.png" alt="GitHub" style="width:24px; height:24px; margin:0 8px;">
+    </a>
+    <a href="https://www.linkedin.com/in/ridmi-jayawardhana-6a9579274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" style="text-decoration:none;">
+      <img src="images/11.png" alt="LinkedIn" style="width:24px; height:24px; margin:0 8px;">
+    </a>
+    <a href="https://www.instagram.com/rid_mee?igsh=dmtmMnlhYzNhNG54&utm_source=qr" target="_blank" style="text-decoration:none;">
+      <img src="images/12.png" alt="Instagram" style="width:24px; height:24px; margin:0 8px;">
+    </a>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const images = Array.from(track.children);
+  const nextBtn = carousel.querySelector('.next');
+  const prevBtn = carousel.querySelector('.prev');
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % images.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + images.length) % images.length;
+    updateCarousel();
+  });
+});
+</script>
+
+</body>
+</html>
